@@ -3,6 +3,7 @@
 # A Backlight Controller Script, because my i3 hates really XF86 multimedia buttons
 echo "Q = Brightness Up"
 echo "A = Brightness Down"
+echo "S = Set Own Value"
 while true; do
 read -rsn1 input
 if [ "$input" = "q" ]; then
@@ -15,6 +16,13 @@ if [ "$input" = "a" ]; then
     echo "Current XBacklight Brightness:"
     xbacklight -get
 fi
+if [ "$input" = "s" ]; then
+    echo "Type a Percentage for XBacklight to Use."
+    read percentage
+    xbacklight -set $percentage
+    echo "Current XBacklight Brightness:"
+    xbacklight -get
+fi
 if [ "$input" = "Q" ]; then # Just in case you accidentally turned on caps lock
     xbacklight -inc 5
     echo "Current XBacklight Brightness:"
@@ -22,6 +30,13 @@ if [ "$input" = "Q" ]; then # Just in case you accidentally turned on caps lock
 fi
 if [ "$input" = "A" ]; then
     xbacklight -dec 5
+    echo "Current XBacklight Brightness:"
+    xbacklight -get
+fi
+if [ "$input" = "S" ]; then
+    echo "Type a Percentage for XBacklight to Use."
+    read percentage
+    xbacklight -set $percentage
     echo "Current XBacklight Brightness:"
     xbacklight -get
 fi
