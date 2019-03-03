@@ -1,5 +1,5 @@
 # ShellSBR
-Some extremely simple programs to control sound and backlight
+Some extremely simple programs to control sound and backlight. 
 Stands for Shell Sound & Backlight Replacement.
 
 I made these because i3config wouldn't let me use my XF86 multimedia buttons. It's sort of an interim replacement.
