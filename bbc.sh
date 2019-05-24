@@ -1,6 +1,6 @@
 #!/bin/bash
 # BBC Backlight Controller, or BBC for short
-# A Backlight Controller Script, because my i3 hates really XF86 multimedia buttons
+# A Backlight Controller Script, because my i3 really hates XF86 multimedia buttons
 echo "Q = Brightness Up"
 echo "A = Brightness Down"
 echo "S = Set Own Value"
