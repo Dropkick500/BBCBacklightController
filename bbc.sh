@@ -4,6 +4,7 @@
 echo "Q = Brightness Up"
 echo "A = Brightness Down"
 echo "S = Set Own Value"
+echo "G = Find Current Brightness"
 echo "E = Exit"
 while true; do
 read -rsn1 input
@@ -24,6 +25,10 @@ if [ "$input" = "s" ]; then
     echo "Current XBacklight Brightness:"
     xbacklight -get
 fi
+if [ "$input" = "g" ]; then
+    echo "Current XBacklight Brightness:"
+    xbacklight -get
+fi
 if [ "$input" = "e" ]; then
     exit 1
 fi
@@ -41,6 +46,10 @@ if [ "$input" = "S" ]; then
     echo "Type a Percentage for XBacklight to Use."
     read percentage
     xbacklight -set $percentage
+    echo "Current XBacklight Brightness:"
+    xbacklight -get
+fi
+if [ "$input" = "G" ]; then
     echo "Current XBacklight Brightness:"
     xbacklight -get
 fi
